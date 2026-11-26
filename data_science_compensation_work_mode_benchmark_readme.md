@@ -7,7 +7,7 @@ An end-to-end data analytics and business intelligence project exploring global 
 ## 1. Background and Overview
 
 ### Business Context
-The rapid expansion of data-driven teams between 2020 and 2022—accelerated by the global shift toward remote work—created significant variance in compensation across roles, experience levels, and regions. Without clear market benchmarks, HR teams and hiring managers risk under-offering top talent or misaligning salary bands across domestic and cross-border hires.
+The rapid expansion of data-driven teams between 2020 and 2022 accelerated by the global shift toward remote work created significant variance in compensation across roles, experience levels, and regions. Without clear market benchmarks, HR teams and hiring managers risk under-offering top talent or misaligning salary bands across domestic and cross-border hires.
 
 ### Project Objectives
 This project analyzes 3 years of global Data Science compensation data to answer four core business questions:
@@ -58,10 +58,14 @@ The raw dataset (`salary.ds_salaries`) was audited, standardized, and deduplicat
 
 ## 3. Executive Summary
 
-* **Accelerating Market Compensation:** Average global data salaries rose from **$95,813** in 2020 to **$99,430** in 2021 (**+3.78% YoY**), before surging to **$123,089** in 2022 (**+23.79% YoY**), driven by heightened demand for senior talent.
-* **Senior-Level Career Multiplier:** Moving from Entry-Level (`EN`) to Senior-Level (`SE`) yields more than double the compensation across all core roles—led by **Data Scientists (+172.38%)**, followed by **Data Engineers (+129.76%)** and **Data Analysts (+107.49%)**.
-* **Full Remote Dominance:** Full Remote (`remote_ratio = 100`) grew from **50.00%** of roles in 2020 to **69.78%** in 2022, while consistently commanding the highest average compensation (**$127,772** in 2022) compared to On-site (**$114,673**) and Hybrid (**$97,876**).
-* **Geographic Compensation Gap:** Employees working in the **Same Country** as their employer earn an average of **$113,969**, representing a **+48.48% premium** over **Cross-Border** talent (**$76,758**), reflecting location-adjusted pay structures.
+* **Accelerating Market Compensation**
+Average global data salaries rose from **$95,813** in 2020 to **$99,430** in 2021 (**+3.78% YoY**), before surging to **$123,089** in 2022 (**+23.79% YoY**), driven by heightened demand for senior talent.
+* **Senior-Level Career Multiplier**
+Moving from Entry-Level (`EN`) to Senior-Level (`SE`) yields more than double the compensation across all core roles led by **Data Scientists (+172.38%)**, followed by **Data Engineers (+129.76%)** and **Data Analysts (+107.49%)**.
+* **Full Remote Dominance**
+Full Remote (`remote_ratio = 100`) grew from **50.00%** of roles in 2020 to **69.78%** in 2022, while consistently commanding the highest average compensation (**$127,772** in 2022) compared to On-site (**$114,673**) and Hybrid (**$97,876**).
+* **Geographic Compensation Gap**
+Employees working in the **Same Country** as their employer earn an average of **$113,969**, representing a **+48.48% premium** over **Cross-Border** talent (**$76,758**), reflecting location-adjusted pay structures.
 
 ---
 
@@ -90,7 +94,8 @@ Using SQL window functions (`LAG()` and `PARTITION BY work_year`), the data reve
 * **Key Takeaway:** By 2022, nearly **7 out of 10** data positions operated 100% remotely (`194` of `278` roles), and Full Remote roles out-earned On-site roles by **+$13,100** on average.
 
 ### C. Geographic Compensation & Cross-Border Strategy
-* **Top Compensation Hubs:** Among major markets with strong sample representation, the **United States (`US`)** leads global compensation with an average of **$144,293**, followed by **Canada (`CA`)** at **$100,122**, **Great Britain (`GB`)** at **$81,650**, and **Germany (`DE`)** at **$81,560**. For Entry & Mid-level On-site *Data Analysts*, the **US** (`$87,627`) and **Canada** (`$69,750`) offer the most competitive starting benchmarks.
+* **Top Compensation Hubs**
+Among major markets with strong sample representation, the **United States (`US`)** leads global compensation with an average of **$144,293**, followed by **Canada (`CA`)** at **$100,122**, **Great Britain (`GB`)** at **$81,650**, and **Germany (`DE`)** at **$81,560**. For Entry & Mid-level On-site *Data Analysts*, the **US** (`$87,627`) and **Canada** (`$69,750`) offer the most competitive starting benchmarks.
 * **Same Country vs. Cross-Border Gap:**
 
 | Residency Status | Avg Salary (USD) | Min Salary (USD) | Max Salary (USD) |
