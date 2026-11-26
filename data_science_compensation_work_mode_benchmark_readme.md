@@ -11,14 +11,20 @@ The rapid expansion of data-driven teams between 2020 and 2022—accelerated by 
 
 ### Project Objectives
 This project analyzes 3 years of global Data Science compensation data to answer four core business questions:
-1. **Compensation Benchmarking & Career Progression:** How do average salaries scale across experience levels (`Entry` → `Mid` → `Senior` → `Executive`) for core Data roles (*Data Scientist*, *Data Engineer*, *Data Analyst*)?
-2. **Market Growth Trends:** How did global data compensation grow year-over-year (YoY) from 2020 to 2022?
-3. **Work Policy Impact:** How has the adoption of Full Remote (`100`), Hybrid (`50`), and On-site (`0`) work shifted over time, and which work mode offers higher compensation?
-4. **Geographic & Cross-Border Strategy:** What is the compensation gap between employees residing in the same country as their employer (`Same Country`) versus international remote hires (`Cross-Border`)?
+1. **Compensation Benchmarking & Career Progression**
+ How do average salaries scale across experience levels (`Entry` → `Mid` → `Senior` → `Executive`) for core Data roles (*Data Scientist*, *Data Engineer*, *Data Analyst*)?
+2. **Market Growth Trends**
+How did global data compensation grow year-over-year (YoY) from 2020 to 2022?
+3. **Work Policy Impact**
+How has the adoption of Full Remote (`100`), Hybrid (`50`), and On-site (`0`) work shifted over time, and which work mode offers higher compensation?
+4. **Geographic & Cross-Border Strategy**
+What is the compensation gap between employees residing in the same country as their employer (`Same Country`) versus international remote hires (`Cross-Border`)?
 
 ### Tech Stack
-* **Database & Data Wrangling:** MySQL (`CTE`, `ROW_NUMBER()`, `LAG()`, Window Functions, Conditional Aggregation)
-* **Business Intelligence & Visualization:** Looker Studio (Interactive KPI Scorecards, Dynamic Filters, Salary Band & Residency Tables)
+* **Database & Data Wrangling**
+  MySQL (`CTE`, `ROW_NUMBER()`, `LAG()`, Window Functions, Conditional Aggregation)
+* **Business Intelligence & Visualization**
+  Looker Studio (Interactive KPI Scorecards, Dynamic Filters, Salary Band & Residency Tables)
 
 ---
 
@@ -27,9 +33,9 @@ This project analyzes 3 years of global Data Science compensation data to answer
 The raw dataset (`salary.ds_salaries`) was audited, standardized, and deduplicated in MySQL into a clean analytical table (`ds_salaries_clean`) containing **565 unique records** spanning **2020–2022**.
 
 ### Data Cleaning Pipeline (`MySQL`)
-* **Null & Domain Validation:** Audited all 11 columns for `NULL` values (0 nulls found) and filtered for valid records (`salary_in_usd > 0` and `remote_ratio IN (0, 50, 100)`).
-* **Deduplication:** Applied `ROW_NUMBER() OVER (PARTITION BY ...)` across all attributes to identify and remove **42 exact duplicate rows** (reducing the dataset from 607 to **565 clean rows**).
-* **String & Label Standardization:** Trimmed whitespace (`TRIM()`) and mapped experience codes (`EN`, `MI`, `SE`, `EX`) into readable labels (`experience_label`).
+* **Null & Domain Validation**, Audited all 11 columns for `NULL` values (0 nulls found) and filtered for valid records (`salary_in_usd > 0` and `remote_ratio IN (0, 50, 100)`).
+* **Deduplication,** Applied `ROW_NUMBER() OVER (PARTITION BY ...)` across all attributes to identify and remove **42 exact duplicate rows** (reducing the dataset from 607 to **565 clean rows**).
+* **String & Label Standardization,** Trimmed whitespace (`TRIM()`) and mapped experience codes (`EN`, `MI`, `SE`, `EX`) into readable labels (`experience_label`).
 
 ### Schema Summary (`ds_salaries_clean` — 565 Rows, 12 Columns)
 
